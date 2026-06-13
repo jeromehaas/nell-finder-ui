@@ -1,0 +1,15 @@
+.app-heading {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.app-heading--display {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.app-heading--section {
+  font-size: 1.15rem;
+  line-height: 1.2;
+}

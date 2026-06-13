@@ -1,0 +1,42 @@
+.app-toast {
+  position: fixed;
+  bottom: max(24px, calc(env(safe-area-inset-bottom) + 12px));
+  left: 50%;
+  z-index: 20;
+  width: min(calc(100vw - 32px), 460px);
+  padding: 14px 16px;
+  border: 1px solid var(--color-danger-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-hero);
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.app-toast--danger {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.app-toast__message {
+  color: var(--color-danger-text);
+}
+
+.app-toast-enter-active,
+.app-toast-leave-active {
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.app-toast-enter-from,
+.app-toast-leave-to {
+  opacity: 0;
+  transform: translate(-50%, 16px);
+}
+
+.app-toast-enter-to,
+.app-toast-leave-from {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

@@ -1,0 +1,70 @@
+.app-switch {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.72;
+  }
+}
+
+.app-switch__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 4px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-soft);
+}
+
+.app-switch__thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 6px);
+  border-radius: calc(var(--radius-lg) - 4px);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.app-switch__label {
+  position: relative;
+  z-index: 1;
+  padding: 12px 14px;
+  text-align: center;
+  color: var(--color-text-subtle);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.app-switch--checked .app-switch__thumb {
+  transform: translateX(calc(100% + 4px));
+}
+
+.app-switch:not(.app-switch--checked) .app-switch__label--off,
+.app-switch--checked .app-switch__label--on {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 720px) {
+  .app-switch__label {
+    padding: 11px 10px;
+    font-size: 0.88rem;
+  }
+}

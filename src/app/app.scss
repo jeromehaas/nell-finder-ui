@@ -1,0 +1,72 @@
+.page-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 24px;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, var(--layout-sidebar-width));
+  gap: var(--layout-gap);
+  align-items: start;
+  width: min(100%, var(--layout-max-width));
+}
+
+.camera-column {
+  min-width: 0;
+}
+
+.sidebar {
+  display: grid;
+  gap: 20px;
+}
+
+.side-card {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.card-eyebrow {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.info-title {
+  max-width: 20ch;
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.info-copy {
+  max-width: 30ch;
+}
+
+.controls-card {
+  gap: 18px;
+}
+
+.control-section {
+  display: grid;
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding: 12px;
+  }
+
+  .side-card {
+    padding: 18px;
+  }
+}

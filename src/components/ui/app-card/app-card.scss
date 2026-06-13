@@ -1,0 +1,17 @@
+.app-card {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.app-card--hero {
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-strong);
+  box-shadow: var(--shadow-hero);
+}
+
+.app-card--subtle {
+  background: var(--color-surface-soft);
+}

@@ -1,0 +1,30 @@
+.app-slider {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-soft);
+}
+
+.app-slider__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.app-slider__label,
+.app-slider__value {
+  color: var(--color-text-primary);
+}
+
+.app-slider__input {
+  width: 100%;
+  accent-color: var(--color-accent);
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
